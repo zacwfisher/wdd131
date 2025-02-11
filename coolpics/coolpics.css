@@ -1,6 +1,4 @@
-/* SOmething isn't working right that I would love feedback on. I can't get the columns to adjust with the browser size */
-
-@import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
  :root {
  --primary-color: #52489c;
  --secondary-color: #59c3c3;
@@ -8,14 +6,13 @@
  --text-dark: #333;
  --text-light: #ebebeb;
  --primary-font: Arial, Helvetica,sans-serif;
- --secondary-font: Mooli, san-serif;
+ --secondary-font: Mooli, sans-serif;
  }
 
 img {
 	width: 100%;
-    max-width: 100%;
+    max-width: 250px;
     height: 250px;
-    width: 250px;
     object-fit: cover;
 }
 
@@ -50,19 +47,73 @@ h2 {
 
 section.gallery {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    border: 1px;
-    border-color: #ebebeb;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    border: 1px solid #ebebeb;
+    place-items: center;
+    margin: 0 auto;
+    max-width: 1000px;
 }
 
 @media screen and (min-width: 700px) {
-    .gallery {
-      grid-template-columns: 1fr 1fr;
+    section.gallery {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
   @media screen and (min-width: 1000px) {
-    .gallery {
-      grid-template-columns: 1fr 1fr;
+    section.gallery {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .viewer img {
+        max-width: 70%;
+        max-height: 80%;
     }
   }
+
+  .viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: grid;
+    place-items: center;
+    z-index: 10;
+}
+
+.viewer img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close-viewer {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+nav {
+    background-color: var(--primary-color);
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px;
+    color: white;
+}
