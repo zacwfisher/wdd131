@@ -24,34 +24,51 @@ document.addEventListener('DOMContentLoaded', function() {
             ages: '12-16',
             genre: 'Fantasy',
             stars: '⭐⭐⭐⭐'
+        },
+        {
+            id: 3,
+            title: 'Belgariad Book One: Pawn of Prophecy',
+            date: 'Feb 12, 2022',
+            description:
+                'A fierce dispute among the Gods and the theft of a powerful Orb leaves the World divided into five kingdoms. Young Garion, with his "Aunt Pol" and an elderly man calling himself Wolf --a father and daughter granted near-immortality by one of the Gods -- set out on a complex mission.',
+            imgSrc: 'https://images-na.ssl-images-amazon.com/images/I/41ZxXA+nInL.jpg',
+            imgAlt: 'Book cover for Pawn of Prophecy',
+            ages: '12-16',
+            genre: 'Fantasy',
+            stars: '⭐⭐⭐⭐⭐'
         }
     ];
 
     const mainContent = document.getElementById('maincontent');
 
-    articles.forEach(article => {
-        const articleElement = document.createElement('article');
+    const generateArticles = () => {
+        articles.forEach(article => {
+            const articleElement = document.createElement('article');
+            
+            const articleHTML = `
+                <header>
+                    <h2>${article.title}</h2>
+                    <p class="date">${article.date}</p>
+                    <div class="details">
+                        <span class="age">${article.ages}</span>
+                        <span class="genre">${article.genre}</span>
+                    </div>
+                    <div class="rating">
+                        ${article.stars.split('').map(star => `<span>${star}</span>`).join('')} 
+                    </div>
+                </header>
+                <section class="book-cover">
+                    <img src="${article.imgSrc}" alt="${article.imgAlt}">
+                </section>
+                <section class="review">
+                    <p>${article.description}</p>
+                </section>
+            `;
 
-        articleElement.innerHTML = `
-            <header>
-                <h2>${article.title}</h2>
-                <p class="date">${article.date}</p>
-                <div class="details">
-                    <span class="age">${article.ages}</span>
-                    <span class="genre">${article.genre}</span>
-                </div>
-                <div class="rating">
-                    ${article.stars.split('').map(star => `<span>${star}</span>`).join('')} 
-                </div>
-            </header>
-            <section class="book-cover">
-                <img src="${article.imgSrc}" alt="${article.imgAlt}">
-            </section>
-            <section class="review">
-                <p>${article.description}</p>
-            </section>
-        `;
+            articleElement.innerHTML = articleHTML;
 
-        mainContent.appendChild(articleElement);
-    });
+            mainContent.appendChild(articleElement);
+        });
+    };
+    generateArticles();
 });
