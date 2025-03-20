@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="recipes.css">
+    <title>Recipe Book</title>
+</head>
+<body>
+    <header>
+        <img src="images/recipe-book.png" alt="Recipe Book Logo" width="50">
+        <h1>Recipe Book</h1>
+    </header>
+    <main>
+        <!-- Search box -->
+        <div class="search-container">
+            <label for="search" class="sr-only">Find a Recipe!</label>
+            <input type="text" id="search" name="search" placeholder="Find a Recipe">
+            <button type="submit" class="search-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
+        </div>
+        <div class="recipe-details">
+            <div class="tags">
+                <span class="tag">dessert</span>
+            </div>
+            <h2>Apple Crisp</h2>
+            <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
+                <span aria-hidden="true" class="icon-star">★</span>
+                <span aria-hidden="true" class="icon-star">★</span>
+                <span aria-hidden="true" class="icon-star">★</span>
+                <span aria-hidden="true" class="icon-star">★</span>
+                <span aria-hidden="true" class="icon-star-empty">☆</span>
+            </span>
+            <img src="images/apple-crisp.jpg" alt="Apple Crisp" class="recipe-image">
+            <p>This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.</p>
+            <h3>Ingredients:</h3>
+            <ul>
+                <li>10 C apples, cored and sliced</li>
+                <li>1 C white sugar</li>
+                <li>1 Tbsp white flour</li>
+                <li>1 tsp ground cinnamon</li>
+                <li>3 Tbsp water</li>
+                <li>1 C rolled oats</li>
+                <li>1 C Flour</li>
+                <li>1 C Brown sugar</li>
+                <li>1/4 tsp baking powder</li>
+                <li>1/4 tsp baking soda</li>
+                <li>1/2 C butter, melted</li>
+            </ul>
+            <h3>Instructions:</h3>
+            <ol>
+                <li>Preheat the oven to 350 degrees F (175 degrees C).</li>
+                <li>Place sliced apples in a 9x13-inch baking dish. Mix white sugar, 1 tablespoon flour, and cinnamon together; sprinkle over apples. Pour water evenly over apples.</li>
+                <li>Combine oats, 1 cup flour, brown sugar, baking powder, and baking soda in a large bowl. Add melted butter and mix with a fork until crumbly; sprinkle evenly over apple mixture.</li>
+                <li>Bake in the preheated oven until top is golden brown and apples are bubbling around the edges, about 45 minutes.</li>
+            </ol>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 My Recipe Book. All rights reserved.</p>
+        <div class="social">
+            <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+            <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+            <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+            <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script type="module" src="recipes.mjs"></script>
+</body>
+</html>

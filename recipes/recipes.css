@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); /* Using Roboto as a more accessible alternative to Amatic SC */
+
+:root {
+    --primary-color: #1B98E0;
+    --secondary-color: #59c3c3;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: 'Roboto', Arial, Helvetica, sans-serif;
+    --secondary-font: 'Roboto', Arial, Helvetica, sans-serif; /* Using Roboto for all text for better accessibility */
+}
+
+body {
+    font-family: var(--primary-font);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+header img {
+    width: 50px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: 700;
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.search-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search-container input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-container .search-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.results-container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.recipe-image {
+    width: 100%; /* Make image responsive */
+    height: auto;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 5;
+    /* text-align: center; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.recipe-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.recipe-details .tags {
+    grid-column: 2 / 3;
+}
+
+.recipe-details span.rating {
+    grid-column: 2 / 3;
+}
+
+.recipe-details h2 {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 10px;
+    grid-column: 2 / 3;
+}
+
+.tags {
+    margin-bottom: 10px;
+}
+
+.tag {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.rating {
+    color: orange;
+    margin-bottom: 10px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Hide recipe description on mobile */
+.results-container p {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.social img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+footer p {
+    font-size: 0.8em;
+    color: #666;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Style for social media icons */
+.social img {
+    width: 24px; /* Make icons smaller */
+    height: 24px; /* Ensure icons remain proportional */
+    margin: 0 10px; /* Add some space between icons */
+}
+
+/* Style for the attribution link */
+
+/* Optional: Hide attribution if you don’t want to display it */
+footer p a {
+    display: none; /* Use this if you don’t want to show attribution */
+}
+
+.recipe-image {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.recipe-details h3 {
+    margin-top: 15px;
+}
+
+.recipe-details ul, .recipe-details ol {
+    padding-left: 20px;
+}
